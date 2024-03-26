@@ -1,0 +1,81 @@
+[
+      {
+          "bookId": 1,
+          "bookName": "The Silent Witness",
+          "author": "Emily Griffin",
+          "image": "https://i.ibb.co/SXTtZ7g/kindpng-7318921.png",
+          "review": "A gripping tale of mystery and intrigue that keeps you guessing until the very end.",
+          "totalPages": 320,
+          "rating": 4.5,
+          "category": "Mystery",
+          "tags": ["Suspense", "Psychological"],
+          "publisher": "HarperCollins",
+          "yearOfPublishing": 2023
+      },
+      {
+          "bookId": 2,
+          "bookName": "Echoes of the Past",
+          "author": "Sarah Johnson",
+          "image": "https://i.ibb.co/1LTRdzV/pngwing-1.png",
+          "review": "A haunting story that delves into the complexities of family dynamics and forgiveness.",
+          "totalPages": 280,
+          "rating": 4.2,
+          "category": "Fiction",
+          "tags": ["Drama", "Family"],
+          "publisher": "Penguin Random House",
+          "yearOfPublishing": 2022
+      },
+      {
+          "bookId": 3,
+          "bookName": "Whispers in the Dark",
+          "author": "Michael Smith",
+          "image": "https://i.ibb.co/q70h6NP/kindpng-1064993.jpg",
+          "review": "An adrenaline-fueled thrill ride that will leave you on the edge of your seat.",
+          "totalPages": 400,
+          "rating": 4.7,
+          "category": "Thriller",
+          "tags": ["Suspense", "Action"],
+          "publisher": "Simon & Schuster",
+          "yearOfPublishing": 2024
+      },
+      {
+          "bookId": 4,
+          "bookName": "Broken Bonds",
+          "author": "Jessica Lee",
+          "image": "https://i.ibb.co/fFKJyx2/kindpng-81724-1.png",
+          "review": "A heart-wrenching tale of love and loss that will stay with you long after you finish the last page.",
+          "totalPages": 350,
+          "rating": 4.3,
+          "category": "Romance",
+          "tags": ["Contemporary", "Emotional"],
+          "publisher": "Harlequin",
+          "yearOfPublishing": 2021
+      },
+      {
+          "bookId": 5,
+          "bookName": "Into the Abyss",
+          "author": "David Miller",
+          "image": "https://i.ibb.co/GFjxfy4/kindpng-4022054-1.png",
+          "review": "A thought-provoking exploration of the human psyche and the darkest corners of the mind.",
+          "totalPages": 290,
+          "rating": 4.6,
+          "category": "Psychological Thriller",
+          "tags": ["Suspense", "Psychological"],
+          "publisher": "Hachette Book Group",
+          "yearOfPublishing": 2023
+      },
+      {
+          "bookId": 6,
+          "bookName": "The Forgotten Key",
+          "author": "Rachel Adams",
+          "image": "https://i.ibb.co/cL8tYN9/kindpng-5624060-1.png",
+          "review": "An enthralling adventure that transports you to a world of magic and mystery.",
+          "totalPages": 380,
+          "rating": 4.4,
+          "category": "Fantasy",
+          "tags": ["Adventure", "Magic"],
+          "publisher": "Macmillan Publishers",
+          "yearOfPublishing": 2020
+      }
+  ]
+  
