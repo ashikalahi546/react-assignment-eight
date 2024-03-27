@@ -3,6 +3,7 @@ import BookDetail from "./BookDetail";
 
 const BooksDetails = () => {
   const [bookDetails, setBooksDetils] = useState([]);
+  // console.log(bookDetails)
   useEffect(() => {
     fetch("fakeData.json")
       .then((res) => res.json())
