@@ -8,8 +8,6 @@ import Pages from "./Pages/Pages";
 import Home from "./Pages/Home";
 import Error from "./Pages/Error";
 import SingleBook from "./Pages/SingleBook";
-// import WishlistBooks from "./Pages/WishlistBooks";
-// import ReadBooks from "./Pages/ReadBooks";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -23,23 +21,16 @@ const router = createBrowserRouter([
       {
         path: "/books",
         element: <Books></Books>,
-        // children: [
-        //   {
-        //     index: true,
-        //     element: <ReadBooks></ReadBooks>,
-        //   },
-        //   {
-        //     path: "wishlistbooks",
-        //     element: <WishlistBooks></WishlistBooks>,
-        //   },
-        // ],
+
       },
       {
         path: "/pages",
         element: <Pages></Pages>,
       },
+
       {
-        path: "/book/:id",
+ 
+        path: '/book/:id',
         element: <SingleBook></SingleBook>,
         loader: () => fetch("../fakeData.json"),
       },
