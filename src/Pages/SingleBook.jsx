@@ -1,23 +1,16 @@
-import { useLoaderData, useParams } from "react-router-dom";
+import { Link, useLoaderData, useParams } from "react-router-dom";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const SingleBook = () => {
   const singleBook = useLoaderData();
   const { bookId } = useParams();
+  const notify = () => toast('Books Added to Read List');
+  const notify2 = () => toast.error('You have Already Read this Books');
 
   const parInt = parseInt(bookId);
   const single = singleBook.find((e) => e.bookId === parInt);
-  // console.log(single)
-  // "bookId": 1,
-  // "bookName": "The Silent Witness",
-  // "author": "Emily Griffin",
-  // "image": "https://i.ibb.co/SXTtZ7g/kindpng-7318921.png",
-  // "review": "A gripping tale of mystery and intrigue that keeps you guessing until the very end.",
-  // "totalPages": 320,
-  // "rating": 4.5,
-  // "category": "Mystery",
-  // "tags": ["Suspense", "Psychological"],
-  // "publisher": "HarperCollins",
-  // "yearOfPublishing": 2023
+
 
   return (
     <div className="grid grid-cols-2 gap-10 mx-40 my-10">
@@ -52,6 +45,11 @@ const SingleBook = () => {
           <h4 className="grid grid-cols-2"><span>Year of Publishing: :</span> <span className="font-medium"> {single.yearOfPublishing}</span></h4>
           <h4 className="grid grid-cols-2"><span>Rating :</span> <span className="font-medium"> {single.rating}</span></h4>
      
+        </div>
+        <div className="mt-5">
+          <Link onClick={notify} className="btn px-5 hover:bg-primary hover:text-white"><button>Read</button></Link>
+          <Link onClick={notify2} className="btn bg-[#50B1C9] text-white ml-3 px-5"><button>Wishlist</button></Link>
+          <ToastContainer></ToastContainer>
         </div>
       </div>
     </div>
