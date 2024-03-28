@@ -5,13 +5,19 @@ import 'react-toastify/dist/ReactToastify.css';
 const SingleBook = () => {
   const singleBook = useLoaderData();
   const { bookId } = useParams();
-  const handleClick = (event) => {
-if(event ){
-  toast('Books Added to Read List');
-}else{
-  toast.error('You have Already Read this Books');
-}
-  }
+
+//   const handleClick = (event) => {
+  
+// if(event){
+//   toast('Books Added to Read List');
+// }else{
+//   toast.error('You have Already Read this Books');
+// }
+//   }
+
+const handle = ()=> toast('Books Added to Read List')
+const handle2 = ()=> toast.error('Books Added to Read List')
+
  
 
 
@@ -53,10 +59,12 @@ if(event ){
           <h4 className="grid grid-cols-2"><span>Rating :</span> <span className="font-medium"> {single.rating}</span></h4>
      
         </div>
-        <div onClick={handleClick} 
+
+
+        <div 
         className="mt-5">
-          <Link className="btn px-5 hover:bg-primary hover:text-white"><button>Read</button></Link>
-          <Link  className="btn bg-[#50B1C9] text-white ml-3 px-5"><button>Wishlist</button></Link>
+          <Link onClick={handle} className="btn px-5 hover:bg-primary hover:text-white"><button>Read</button></Link>
+          <Link onClick={handle2}  className="btn bg-[#50B1C9] text-white ml-3 px-5"><button>Wishlist</button></Link>
           <ToastContainer></ToastContainer>
         </div>
       </div>

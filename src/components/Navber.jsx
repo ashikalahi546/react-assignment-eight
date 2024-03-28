@@ -1,14 +1,16 @@
 import { Link, NavLink } from "react-router-dom";
 
+
 const Navber = () => {
   return (
-    <div className="navbar bg-base-100 my-2.5">
-      <div className="navbar-start">
+    <div className="flex  justify-between bg-base-100 my-3.5">
+
+      <div >
         <NavLink to="/error" className="btn btn-ghost text-xl font-bold">
           Book Vibe
         </NavLink>
       </div>
-      <div className="navbar-center flex">
+      <div className="">
         <ul className="menu menu-horizontal px-1 font-medium flex items-center gap-4">
           <NavLink
             to="/"
@@ -42,7 +44,7 @@ const Navber = () => {
           </NavLink>
         </ul>
       </div>
-      <div className="navbar-end">
+      <div className="sm:block hidden">
         <Link
           to="/error"
           className="btn bg-primary text-white hover:bg-green-500 "

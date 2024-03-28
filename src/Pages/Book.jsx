@@ -18,9 +18,11 @@ const Book = ({ book }) => {
   return (
     <div>
       <div className=" border rounded-xl p-5">
-        <div className="flex gap-8">
-          <div className="bg-gray-50 px-16 py-6 rounded-xl">
-            <img className="w-32" src={image} alt="" />
+        <div className="flex lg:flex-row flex-col gap-8">
+          <div className="bg-gray-50 px-16 py-6 rounded-xl flex justify-center">
+        
+           <img className="w-32" src={image} alt="" />
+          
           </div>
           <div className="flex flex-col gap-4">
             <h1 className="text-2xl font-medium">{bookName}</h1>
