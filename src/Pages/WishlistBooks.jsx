@@ -2,7 +2,7 @@
 
 const WishlistBooks = () => {
       return (
-            <div>
+            <div class = 'mt-4'>
                   <h2>Wishlist Books</h2>
             </div>
       );
