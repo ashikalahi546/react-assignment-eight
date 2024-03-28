@@ -5,8 +5,15 @@ import 'react-toastify/dist/ReactToastify.css';
 const SingleBook = () => {
   const singleBook = useLoaderData();
   const { bookId } = useParams();
-  const notify = () => toast('Books Added to Read List');
-  const notify2 = () => toast.error('You have Already Read this Books');
+  const handleClick = (event) => {
+if(event ){
+  toast('Books Added to Read List');
+}else{
+  toast.error('You have Already Read this Books');
+}
+  }
+ 
+
 
   const parInt = parseInt(bookId);
   const single = singleBook.find((e) => e.bookId === parInt);
@@ -31,8 +38,8 @@ const SingleBook = () => {
           Tag
           <span className="flex gap-4">
             {" "}
-            {single.tags.map((tag) => (
-              <h2 className="bg-green-200 px-5 py-0.5 rounded-full text-green-500 text-sm">
+            {single.tags.map((tag,idx) => (
+              <h2 key={idx} className="bg-green-200 px-5 py-0.5 rounded-full text-green-500 text-sm">
                 #{tag}
               </h2>
             ))}
@@ -46,9 +53,10 @@ const SingleBook = () => {
           <h4 className="grid grid-cols-2"><span>Rating :</span> <span className="font-medium"> {single.rating}</span></h4>
      
         </div>
-        <div className="mt-5">
-          <Link onClick={notify} className="btn px-5 hover:bg-primary hover:text-white"><button>Read</button></Link>
-          <Link onClick={notify2} className="btn bg-[#50B1C9] text-white ml-3 px-5"><button>Wishlist</button></Link>
+        <div onClick={handleClick} 
+        className="mt-5">
+          <Link className="btn px-5 hover:bg-primary hover:text-white"><button>Read</button></Link>
+          <Link  className="btn bg-[#50B1C9] text-white ml-3 px-5"><button>Wishlist</button></Link>
           <ToastContainer></ToastContainer>
         </div>
       </div>

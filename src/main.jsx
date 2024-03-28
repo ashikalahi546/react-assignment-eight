@@ -8,6 +8,8 @@ import Pages from "./Pages/Pages";
 import Home from "./Pages/Home";
 import Error from "./Pages/Error";
 import SingleBook from "./Pages/SingleBook";
+import ReadBooks from "./Pages/ReadBooks";
+import WishlistBooks from "./Pages/WishlistBooks";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -21,6 +23,16 @@ const router = createBrowserRouter([
       {
         path: "/books",
         element: <Books></Books>,
+        children:[
+          {
+            index:true,
+            element:<ReadBooks></ReadBooks>
+          },
+          {
+            path:'wishlistbooks',
+            element:<WishlistBooks></WishlistBooks>
+          },
+        ]
 
       },
       {
@@ -33,6 +45,7 @@ const router = createBrowserRouter([
         path: '/book/:bookId',
         element: <SingleBook></SingleBook>,
         loader: () => fetch("../fakeData.json"),
+  
       },
     ],
   },
